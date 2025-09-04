@@ -92,15 +92,13 @@ const LearningSection = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        width: "95%",
+        width: "100%",
         minHeight: "660px",
         background: "linear-gradient(100deg, #ddf2fa 60%, #cbf0fc 100%)",
-        borderRadius: "24px",
-        margin: "48px auto",
         overflow: "hidden",
         position: "relative",
         boxShadow: "0 6px 48px 0 rgba(100,140,255,0.05)",
-        padding: "20px 0"
+        padding: "60px 20px"
       }}
     >
       {/* Background decorative elements */}
@@ -117,13 +115,14 @@ const LearningSection = () => {
       
       {/* Left panel with dashboard image and floating cards */}
       <div style={{ 
-        flex: 1.2, 
+        flex: 1, 
         display: "flex", 
         justifyContent: "center", 
         alignItems: "center", 
         position: 'relative',
         zIndex: 2,
-        padding: "0 20px"
+        padding: "0 20px",
+        maxWidth: "600px"
       }}>
         {/* Floating cards in diagonal step pattern */}
         {isVisible && (
@@ -137,35 +136,36 @@ const LearningSection = () => {
               style={{
                 position: "absolute",
                 top: "12%",
-                left: "5%",
+                left: "12%",
                 background: "white",
                 borderRadius: "12px",
-                padding: "12px",
-                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.1)",
-                width: "120px",
-                height: "60px",
+                padding: "10px",
+                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.12)",
+                width: "90px",
+                height: "50px",
                 zIndex: 3,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center"
+                justifyContent: "center",
+                border: "1px solid rgba(255, 255, 255, 0.6)"
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", marginBottom: "6px" }}>
+              <div style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}>
                 <div style={{
-                  width: "16px",
-                  height: "16px",
-                  borderRadius: "4px",
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "3px",
                   background: "linear-gradient(135deg, #6A11CB 0%, #2575FC 100%)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginRight: "8px"
+                  marginRight: "6px"
                 }}>
-                  <FaUser style={{ color: "white", fontSize: "10px" }} />
+                  <FaUser style={{ color: "white", fontSize: "8px" }} />
                 </div>
-                <span style={{ fontSize: "11px", color: "#718096" }}>Active</span>
+                <span style={{ fontSize: "9px", color: "#718096" }}>Active</span>
               </div>
-              <span style={{ fontSize: "18px", fontWeight: "bold", color: "#2D3748", marginLeft: "24px" }}>13</span>
+              <span style={{ fontSize: "16px", fontWeight: "bold", color: "#2D3748", marginLeft: "18px" }}>13</span>
             </motion.div>
 
             {/* Study Time Card */}
@@ -176,36 +176,37 @@ const LearningSection = () => {
               variants={floatingCardVariants}
               style={{
                 position: "absolute",
-                top: "30%",
-                left: "8%",
+                top: "38%",
+                left: "14%",
                 background: "white",
                 borderRadius: "12px",
-                padding: "12px",
-                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.1)",
-                width: "120px",
-                height: "60px",
+                padding: "10px",
+                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.12)",
+                width: "100px",
+                height: "55px",
                 zIndex: 3,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center"
+                justifyContent: "center",
+                border: "1px solid rgba(255, 255, 255, 0.6)"
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", marginBottom: "6px" }}>
+              <div style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}>
                 <div style={{
-                  width: "16px",
-                  height: "16px",
-                  borderRadius: "4px",
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "3px",
                   background: "linear-gradient(135deg, #FF512F 0%, #F09819 100%)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginRight: "8px"
+                  marginRight: "6px"
                 }}>
-                  <FaClock style={{ color: "white", fontSize: "10px" }} />
+                  <FaClock style={{ color: "white", fontSize: "8px" }} />
                 </div>
-                <span style={{ fontSize: "11px", color: "#718096" }}>Study Time</span>
+                <span style={{ fontSize: "9px", color: "#718096" }}>Study Time</span>
               </div>
-              <span style={{ fontSize: "18px", fontWeight: "bold", color: "#2D3748", marginLeft: "24px" }}>8.5h</span>
+              <span style={{ fontSize: "16px", fontWeight: "bold", color: "#2D3748", marginLeft: "18px" }}>8.5h</span>
             </motion.div>
 
             {/* Courses Card */}
@@ -216,106 +217,109 @@ const LearningSection = () => {
               variants={floatingCardVariants}
               style={{
                 position: "absolute",
-                top: "48%",
-                left: "11%",
+                top: "66%",
+                left: "22%",
                 background: "white",
                 borderRadius: "12px",
-                padding: "12px",
-                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.1)",
-                width: "120px",
-                height: "60px",
+                padding: "10px",
+                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.12)",
+                width: "100px",
+                height: "55px",
                 zIndex: 3,
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center"
+                justifyContent: "center",
+                border: "1px solid rgba(255, 255, 255, 0.6)"
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", marginBottom: "6px" }}>
+              <div style={{ display: "flex", alignItems: "center", marginBottom: "4px" }}>
                 <div style={{
-                  width: "16px",
-                  height: "16px",
-                  borderRadius: "4px",
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "3px",
                   background: "linear-gradient(135deg, #0BA360 0%, #3CBA92 100%)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginRight: "8px"
+                  marginRight: "6px"
                 }}>
-                  <FaBook style={{ color: "white", fontSize: "10px" }} />
+                  <FaBook style={{ color: "white", fontSize: "8px" }} />
                 </div>
-                <span style={{ fontSize: "11px", color: "#718096" }}>Courses</span>
+                <span style={{ fontSize: "9px", color: "#718096" }}>Courses</span>
               </div>
-              <span style={{ fontSize: "18px", fontWeight: "bold", color: "#2D3748", marginLeft: "24px" }}>5</span>
+              <span style={{ fontSize: "16px", fontWeight: "bold", color: "#2D3748", marginLeft: "18px" }}>5</span>
             </motion.div>
 
-            {/* Performance Card */}
-            <motion.div
-              custom={3}
-              initial="initial"
-              animate={["animate", "float"]}
-              variants={floatingCardVariants}
-              style={{
-                position: "absolute",
-                top: "66%",
-                left: "14%",
-                background: "white",
-                borderRadius: "12px",
-                padding: "12px",
-                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.1)",
-                width: "120px",
-                height: "60px",
-                zIndex: 3,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center"
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", marginBottom: "6px" }}>
-                <div style={{
-                  width: "16px",
-                  height: "16px",
-                  borderRadius: "4px",
-                  background: "linear-gradient(135deg, #FF057C 0%, #8D0B93 100%)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginRight: "8px"
-                }}>
-                  <FaChartLine style={{ color: "white", fontSize: "10px" }} />
-                </div>
-                <span style={{ fontSize: "11px", color: "#718096" }}>Performance</span>
-              </div>
-              <span style={{ fontSize: "18px", fontWeight: "bold", color: "#2D3748", marginLeft: "24px" }}>92%</span>
-            </motion.div>
+            {/* Performance Card removed to keep only 3 cards */}
           </>
         )}
 
-        {/* Dashboard screenshot - Made bigger */}
-        <motion.img
-          src={athenaDash}
-          alt="Athena LMS Dashboard"
-          style={{
-            width: "100%",
-            maxWidth: 720,
-            borderRadius: "20px",
-            boxShadow: "0 24px 80px 0 rgba(50,80,120,0.15), 0 4px 30px 0 rgba(90,199,250,0.1)",
-            position: "relative",
-            zIndex: 2,
-          }}
-          initial={{ opacity: 0, y: 30, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.8, type: "spring", stiffness: 60, damping: 16 }}
-          viewport={{ once: true }}
-        />
+        {/* Image wrapper with overlay button */}
+        <div style={{ position: "relative", width: "100%", maxWidth: 500 }}>
+          <motion.img
+            src={athenaDash}
+            alt="Athena LMS Dashboard"
+            style={{
+              width: "100%",
+              height: "auto",
+              aspectRatio: "16/10",
+              objectFit: "cover",
+              borderRadius: "24px",
+              boxShadow: "0 20px 60px 0 rgba(37, 41, 45, 0.2), 0 8px 25px 0 rgba(90,199,250,0.15)",
+              position: "relative",
+              zIndex: 2,
+              border: "3px solid rgba(255, 255, 255, 0.3)",
+              backdropFilter: "blur(10px)"
+            }}
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, type: "spring", stiffness: 60, damping: 16 }}
+            viewport={{ once: true }}
+          />
+          <motion.button
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{
+              scale: 1.03,
+              backgroundColor: "rgba(57, 59, 60, 0.29)",
+              boxShadow: "0 10px 24px rgba(40, 39, 44, 0.22)"
+            }}
+            whileTap={{ scale: 0.985 }}
+            transition={{ duration: 0.2 }}
+            viewport={{ once: true }}
+            style={{
+              position: "absolute",
+              left: 12,
+              bottom: 12,
+              padding: "8px 14px",
+              backgroundColor: "rgba(0, 0, 0, 0.16)",
+              color: "#e8efff",
+              border: "1px solid rgba(79,70,229,0.4)",
+              borderRadius: 10,
+              backdropFilter: "blur(6px)",
+              WebkitBackdropFilter: "blur(6px)",
+              fontWeight: 600,
+              fontSize: "0.9rem",
+              letterSpacing: 0.3,
+              cursor: "pointer",
+              zIndex: 3
+            }}
+          >
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+              View Demo
+              <FaArrowRight style={{ fontSize: 14, opacity: 0.9 }} />
+            </span>
+          </motion.button>
+        </div>
       </div>
 
-      {/* Right panel with content - Slightly narrower */}
+      {/* Right panel with content - Balanced */}
       <motion.div 
         style={{ 
-          flex: 0.9, 
-          minWidth: 380, 
-          maxWidth: 500, 
-          padding: "0 2.6vw",
+          flex: 1, 
+          minWidth: 400, 
+          maxWidth: 550, 
+          padding: "0 40px",
           zIndex: 2
         }}
         variants={itemVariants}

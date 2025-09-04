@@ -76,12 +76,10 @@ export default function Features() {
     position: "relative",
     width: "100%",
     minHeight: "520px",
-    borderRadius: 28,
     boxShadow: "0 6px 32px rgba(80,120,210,0.07)",
-    padding: "28px 12px 0 12px",
+    padding: "60px 20px 40px 20px",
     background: "linear-gradient(135deg,#8fd6ff 0%,#f7faff 75%)",
     overflow: "hidden",
-    margin: "0 auto",
     boxSizing: "border-box"
   };
   const svgStyle = {

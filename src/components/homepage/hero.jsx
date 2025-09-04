@@ -183,8 +183,15 @@ export default function Hero() {
         <h1 className="hero-heading">
           Transform Your Learning
           <br/>
-          <span className="inline-img">
-            <img src={athenadash} alt="Athena Logo" />
+          <span className="inline-img" style={{ display: 'inline-flex', alignItems: 'center' }}>
+            <motion.span
+              initial={{ width: 0 }}
+              animate={{ width: 'auto' }}
+              transition={{ ease: [0.86, 0, 0.07, 0.995], duration: 1, delay: 1.5 }}
+              style={{ display: 'inline-block', overflow: 'hidden' }}
+            >
+              <img src={athenadash} alt="Athena Logo" />
+            </motion.span>
           </span>
           Skill Enhancing
           <br/>
