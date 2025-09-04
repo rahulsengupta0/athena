@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import athenadash from "../../assets/AthenaDash.png";
+import interactive from "../../assets/interactive.mp4";
 
 export default function Hero() {
   return (
@@ -12,24 +13,32 @@ export default function Hero() {
             position: relative;
             width: 100vw;
             height: 100vh;
-            background: url('/your-background-image.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             box-sizing: border-box;
           }
+          .hero-bg-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+          }
           .hero-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(23, 35, 61, 0.40);
-            z-index: 0;
+            background: rgba(0, 102, 255, 0.35);
+            z-index: 1;
           }
           .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             width: 100%;
-            max-width: 900px;
+            max-width: 1200px;
             margin-left: 3rem;
+            padding: 0 1.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -63,21 +72,28 @@ export default function Hero() {
             border-top: 1.5px solid rgba(255,255,255,0.35);
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px 18px;
             align-items: center;
             color: #fff;
             font-family: 'Neue Montreal', Arial, sans-serif;
-            font-size: 1.27em;
+            font-size: 1.05em;
+            line-height: 1.5;
             opacity: 0.92;
+            width: 100%;
           }
           .hero-desc {
-            font-size: 1.22em;
+            font-size: 1.02em;
             opacity: 0.91;
+            flex: 1 1 320px;
           }
           .hero-action {
-            margin-left: 2.2em;
+            margin-left: 0;
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
+            justify-content: flex-end;
+            flex: 1 1 320px;
           }
           .start-btn {
             background: rgba(255,255,255,0.13);
@@ -119,6 +135,7 @@ export default function Hero() {
             .hero-content {
               margin-left: 1rem;
               max-width: 98vw;
+              padding: 0 1rem;
             }
             .hero-heading {
               font-size: 7vw;
@@ -126,10 +143,17 @@ export default function Hero() {
             .hero-heading img {
               height: 55px;
             }
+            .hero-sub-links {
+              font-size: 0.98em;
+            }
+            .hero-desc {
+              font-size: 0.98em;
+            }
           }
           @media (max-width: 600px) {
             .hero-content {
               margin-left: 0.2rem;
+              padding: 0 0.6rem;
             }
             .hero-heading {
               font-size: 11vw;
@@ -140,17 +164,20 @@ export default function Hero() {
             .hero-sub-links {
               flex-direction: column;
               align-items: flex-start;
-              gap: 14px;
-              font-size: 0.97em;
+              gap: 10px;
+              font-size: 0.95em;
             }
             .hero-action {
               margin-left: 0;
               margin-top: 14px;
+              width: 100%;
+              justify-content: flex-start;
             }
           }
         `}
       </style>
 
+      <video className="hero-bg-video" autoPlay muted loop playsInline src={interactive} />
       <div className="hero-overlay" />
       <div className="hero-content">
         <h1 className="hero-heading">
