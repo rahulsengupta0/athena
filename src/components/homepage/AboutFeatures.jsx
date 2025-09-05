@@ -361,7 +361,7 @@ const AboutFeatures = () => {
             </motion.h3>
             
             <motion.div 
-              style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
+              style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -389,45 +389,54 @@ const AboutFeatures = () => {
                   key={index}
                   variants={fadeIn}
                   style={{
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '1rem',
-                    padding: '1.2rem',
-                    background: 'rgba(255, 255, 255, 0.7)',
-                    borderRadius: '12px',
-                    border: '1px solid rgba(2, 132, 199, 0.1)',
-                    backdropFilter: 'blur(10px)',
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 4px 6px rgba(2, 132, 199, 0.05)'
-                  }}
-                  whileHover={{
-                    background: 'rgba(255, 255, 255, 0.9)',
-                    borderColor: 'rgba(2, 132, 199, 0.3)',
-                    y: -3,
-                    boxShadow: '0 10px 15px rgba(2, 132, 199, 0.1)'
+                    position: 'relative',
+                    padding: '1px',
+                    borderRadius: 14,
+                    background: 'linear-gradient(135deg, rgba(2,132,199,0.35), rgba(56,189,248,0.25))',
                   }}
                 >
-                  <motion.div 
+                  <motion.div
                     style={{
-                      padding: '8px',
-                      background: 'linear-gradient(135deg, #0284c7, #0ea5e9)',
-                      color: 'white',
-                      borderRadius: '10px',
                       display: 'flex',
-                      marginTop: '2px',
-                      flexShrink: 0
+                      alignItems: 'flex-start',
+                      gap: '1rem',
+                      padding: '1rem 1.1rem',
+                      background: 'rgba(255, 255, 255, 0.78)',
+                      borderRadius: 13,
+                      border: '1px solid rgba(2, 132, 199, 0.12)',
+                      backdropFilter: 'blur(10px)',
+                      boxShadow: '0 6px 14px rgba(2, 132, 199, 0.08)'
                     }}
-                    whileHover={{ rotate: 5, scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    whileHover={{ y: -4, rotate: 0.2, boxShadow: '0 14px 26px rgba(2, 132, 199, 0.16)' }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 18 }}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" style={{ height: '18px', width: '18px' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <motion.div 
+                      style={{
+                        padding: '8px',
+                        background: 'linear-gradient(135deg, #0284c7, #0ea5e9)',
+                        color: 'white',
+                        borderRadius: '10px',
+                        display: 'flex',
+                        marginTop: '2px',
+                        flexShrink: 0,
+                        boxShadow: '0 6px 14px rgba(2,132,199,0.25)'
+                      }}
+                      animate={{ rotate: [0, 2, -2, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" style={{ height: '18px', width: '18px' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </motion.div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <h4 style={{ fontSize: '1.06rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.35rem' }}>{item.title}</h4>
+                        <span style={{ fontSize: '0.75rem', color: '#0369a1', background: 'rgba(2,132,199,0.12)', border: '1px solid rgba(2,132,199,0.25)', padding: '4px 8px', borderRadius: 999 }}>{index + 1}</span>
+                      </div>
+                      <p style={{ color: '#475569', fontSize: '0.94rem', lineHeight: 1.55, margin: 0 }}>{item.description}</p>
+                      <div style={{ marginTop: 10, height: 3, width: '40%', background: 'linear-gradient(90deg, #0284c7, #38bdf8)', borderRadius: 6, opacity: 0.55 }} />
+                    </div>
                   </motion.div>
-                  <div>
-                    <h4 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#0f172a', marginBottom: '0.4rem' }}>{item.title}</h4>
-                    <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: 1.5 }}>{item.description}</p>
-                  </div>
                 </motion.div>
               ))}
             </motion.div>

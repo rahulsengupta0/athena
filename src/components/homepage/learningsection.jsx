@@ -88,11 +88,12 @@ const LearningSection = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
+      className="learning-section"
       style={{
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        width: "100%",
+        maxWidth: '1500px',
         minHeight: "660px",
         background: "linear-gradient(100deg, #ddf2fa 60%, #cbf0fc 100%)",
         overflow: "hidden",
@@ -133,6 +134,7 @@ const LearningSection = () => {
               initial="initial"
               animate={["animate", "float"]}
               variants={floatingCardVariants}
+              className="floating-card"
               style={{
                 position: "absolute",
                 top: "12%",
@@ -174,6 +176,7 @@ const LearningSection = () => {
               initial="initial"
               animate={["animate", "float"]}
               variants={floatingCardVariants}
+              className="floating-card"
               style={{
                 position: "absolute",
                 top: "38%",
@@ -215,6 +218,7 @@ const LearningSection = () => {
               initial="initial"
               animate={["animate", "float"]}
               variants={floatingCardVariants}
+              className="floating-card"
               style={{
                 position: "absolute",
                 top: "66%",
@@ -329,6 +333,7 @@ const LearningSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.08, duration: 0.44, type: "tween" }}
           viewport={{ once: true }}
+          className="section-title"
           style={{
             fontSize: "2.5rem",
             fontWeight: 700,
@@ -498,6 +503,171 @@ const LearningSection = () => {
           <FaArrowRight style={{ fontSize: "14px" }} />
         </motion.button>
       </motion.div>
+
+      {/* Mobile Responsive Styles */}
+      <style>
+        {`
+          .learning-section {
+            transition: all 0.3s ease;
+            margin: 0 auto;
+          }
+          
+          /* Large Desktop */
+          @media (min-width: 1200px) {
+            .learning-section {
+              max-width: 1500px;
+            }
+          }
+          
+          /* Desktop to Tablet */
+          @media (max-width: 1024px) {
+            .learning-section {
+              flex-direction: row !important;
+              gap: 20px !important;
+              padding: 40px 15px !important;
+              min-height: 500px !important;
+              max-width: 100% !important;
+            }
+            
+            .learning-section > div:first-child {
+              max-width: 50% !important;
+              padding: 0 !important;
+            }
+            
+            .learning-section > div:last-child {
+              min-width: 50% !important;
+              max-width: 50% !important;
+              padding: 0 15px !important;
+            }
+            
+            .section-title {
+              font-size: 2rem !important;
+              text-align: left !important;
+              margin: 0 0 20px 0 !important;
+            }
+          }
+          
+          /* Tablet */
+          @media (max-width: 768px) {
+            .learning-section {
+              flex-direction: column !important;
+              padding: 35px 15px !important;
+              gap: 30px !important;
+              min-height: auto !important;
+            }
+            
+            .learning-section > div:first-child {
+              max-width: 100% !important;
+              padding: 0 !important;
+              order: 2;
+            }
+            
+            .learning-section > div:last-child {
+              min-width: auto !important;
+              max-width: 100% !important;
+              padding: 0 10px !important;
+              order: 1;
+            }
+            
+            .section-title {
+              font-size: 1.8rem !important;
+              margin: 0 0 20px 0 !important;
+              text-align: center !important;
+            }
+            
+            .floating-card {
+              display: none !important;
+            }
+          }
+          
+          /* Mobile */
+          @media (max-width: 600px) {
+            .learning-section {
+              flex-direction: column !important;
+              padding: 30px 12px !important;
+              gap: 25px !important;
+              min-height: auto !important;
+            }
+            
+            .learning-section > div:first-child {
+              max-width: 100% !important;
+              padding: 0 !important;
+              order: 2;
+            }
+            
+            .learning-section > div:last-child {
+              min-width: auto !important;
+              max-width: 100% !important;
+              padding: 0 5px !important;
+              order: 1;
+            }
+            
+            .section-title {
+              font-size: 1.5rem !important;
+              margin: 0 0 18px 0 !important;
+              text-align: center !important;
+            }
+          }
+          
+          /* Small Mobile */
+          @media (max-width: 480px) {
+            .learning-section {
+              flex-direction: column !important;
+              padding: 25px 10px !important;
+              gap: 20px !important;
+              min-height: auto !important;
+            }
+            
+            .learning-section > div:first-child {
+              max-width: 100% !important;
+              padding: 0 !important;
+              order: 2;
+            }
+            
+            .learning-section > div:last-child {
+              min-width: auto !important;
+              max-width: 100% !important;
+              padding: 0 2px !important;
+              order: 1;
+            }
+            
+            .section-title {
+              font-size: 1.3rem !important;
+              margin: 0 0 15px 0 !important;
+              text-align: center !important;
+            }
+          }
+          
+          /* Extra Small Mobile */
+          @media (max-width: 360px) {
+            .learning-section {
+              flex-direction: column !important;
+              padding: 20px 8px !important;
+              gap: 18px !important;
+              min-height: auto !important;
+            }
+            
+            .learning-section > div:first-child {
+              max-width: 100% !important;
+              padding: 0 !important;
+              order: 2;
+            }
+            
+            .learning-section > div:last-child {
+              min-width: auto !important;
+              max-width: 100% !important;
+              padding: 0 1px !important;
+              order: 1;
+            }
+            
+            .section-title {
+              font-size: 1.1rem !important;
+              margin: 0 0 12px 0 !important;
+              text-align: center !important;
+            }
+          }
+        `}
+      </style>
     </motion.section>
   );
 };

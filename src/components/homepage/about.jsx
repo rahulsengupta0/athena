@@ -19,7 +19,7 @@ const About = () => {
       ref={containerRef}
       style={{
         width: '100%',
-        padding: '60px 20px',
+        padding: '5rem 0',
         background: 'linear-gradient(to bottom, #f0f9ff, #e0f2fe, #f0f9ff)',
         overflow: 'hidden',
         position: 'relative',
