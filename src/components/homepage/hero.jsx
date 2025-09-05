@@ -18,6 +18,8 @@ export default function Hero() {
             justify-content: flex-start;
             box-sizing: border-box;
             overflow: hidden;
+            margin-top: 0;
+            padding-top: 0;
           }
           .hero-bg-video {
             position: absolute;
@@ -30,18 +32,24 @@ export default function Hero() {
             z-index: 0;
           }
           .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 102, 255, 0.35);
-            z-index: 1;
-          }
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 58, 138, 0.4),  /* from-blue-900/40 */
+    rgba(30, 64, 175, 0.3),  /* via-blue-800/30 */
+    rgba(30, 58, 138, 0.4)   /* to-blue-900/40 */
+  );
+  z-index: 1;
+}
+
           .hero-content {
             position: relative;
             z-index: 2;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 3rem;
+            padding: 80px 3rem 0 3rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -147,7 +155,7 @@ export default function Hero() {
           @media (max-width: 1200px) {
             .hero-content {
               max-width: 100%;
-              padding: 0 2.5rem;
+              padding: 70px 2.5rem 0 2.5rem;
             }
             .hero-heading {
               font-size: 4.2vw;
@@ -159,7 +167,7 @@ export default function Hero() {
             .hero-content {
               margin: 0 auto;
               max-width: 100%;
-              padding: 0 2rem;
+              padding: 60px 2rem 0 2rem;
             }
             .hero-heading {
               font-size: 6.5vw;
@@ -178,7 +186,7 @@ export default function Hero() {
           @media (max-width: 768px) {
             .hero-content {
               margin: 0 auto;
-              padding: 0 1.5rem;
+              padding: 80px 1.5rem 0 1.5rem;
             }
             .hero-heading {
               font-size: 8vw;
@@ -194,7 +202,7 @@ export default function Hero() {
           @media (max-width: 600px) {
             .hero-content {
               margin: 0 auto;
-              padding: 0 1rem;
+              padding: 80px 1rem 0 1rem;
             }
             .hero-heading {
               font-size: 10vw;
@@ -219,7 +227,7 @@ export default function Hero() {
           /* Small Mobile */
           @media (max-width: 480px) {
             .hero-content {
-              padding: 0 0.8rem;
+              padding: 80px 0.8rem 0 0.8rem;
             }
             .hero-heading {
               font-size: 12vw;
@@ -244,7 +252,7 @@ export default function Hero() {
           /* Extra Small Mobile */
           @media (max-width: 360px) {
             .hero-content {
-              padding: 0 0.6rem;
+              padding: 80px 0.6rem 0 0.6rem;
             }
             .hero-heading {
               font-size: 13vw;
