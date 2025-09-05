@@ -89,8 +89,8 @@ const Navbar = () => {
           <a href="/" style={navLinkStyle}>About Us</a>
           <a href="/" style={navLinkStyle}>Features</a>
           <a href="/" style={navLinkStyle}>Why Us</a>
-          <a href="/" style={navLinkStyle}>FAQ</a>
-          <a href="/" style={navLinkStyle}>Contact Us</a>
+          <a href="/faq" style={navLinkStyle}>FAQ</a>
+          <a href="/contact" style={navLinkStyle}>Contact Us</a>
           <a
             href="/"
             style={{
