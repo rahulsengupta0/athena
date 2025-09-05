@@ -229,9 +229,10 @@ const Navbar = () => {
         @media (max-width: 600px) {
           .athena-navbar { 
             padding: 10px 14px; 
-            top: 10px; 
-            left: 8px;
-            right: 8px;
+            top: 0 !important; 
+            left: 0 !important;
+            right: 0 !important;
+            border-radius: 0 !important;
           }
           .athena-navbar div:first-child {
             font-size: 1.5rem;
@@ -288,6 +289,16 @@ const Navbar = () => {
         
         .athena-menu-btn:hover {
           background: rgba(255,255,255,0.4);
+        }
+        
+        /* Keep navbar fixed on top */
+        .athena-navbar {
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          z-index: 1000 !important;
+          border-radius: 0 !important;
         }
         
         /* Drawer content optimization */
