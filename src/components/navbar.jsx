@@ -221,7 +221,7 @@ const Navbar = () => {
         />
       )}
 
-      <style jsx>{`
+      <style >{`
         @media (max-width: 900px) {
           .athena-navbar { 
             padding: 10px 16px; 
