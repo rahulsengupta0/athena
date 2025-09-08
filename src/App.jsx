@@ -3,7 +3,10 @@ import './App.css'
 import Home from "./pages/homepage/home"
 import Navbar from "./components/navbar"
 import Footer from "./components/footer"
+import PageTransitionOverlay from "./components/PageTransitionOverlay"
 import About from  "./pages/AboutUs/About"
+import { Contact } from "./pages/contact/contact"
+import FaqPage from "./pages/faqpage/faqpage"
 
 function App() {
   return (
@@ -13,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/faq" element={<FaqPage/>} />
       </Routes>
       <Footer />
     </Router>
