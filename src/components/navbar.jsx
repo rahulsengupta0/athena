@@ -73,9 +73,20 @@ const Navbar = () => {
           pointerEvents: show ? "auto" : "none",
         }}
       >
-        <div style={{ fontWeight: "bold", fontSize: "1.8rem", color: "#fff", letterSpacing: "0.5px" }}>
-          ATHENA LMS
-        </div>
+        <a
+  href="/"
+  style={{
+    fontWeight: "bold",
+    fontSize: "1.8rem",
+    color: "#fff",
+    letterSpacing: "0.5px",
+    textDecoration: "none",
+    cursor: "pointer"
+  }}
+>
+  ATHENA LMS
+</a>
+
         
         <button
           aria-label="Menu"
@@ -86,9 +97,9 @@ const Navbar = () => {
         </button>
         
         <div className="athena-links" style={{ display: "flex", alignItems: "center", gap: "28px" }}>
-          <a href="/" style={navLinkStyle}>About Us</a>
-          <a href="/" style={navLinkStyle}>Features</a>
-          <a href="/" style={navLinkStyle}>Why Us</a>
+          <a href="/about" style={navLinkStyle}>About Us</a>
+          <a href="/features" style={navLinkStyle}>Features</a>
+          <a href="/whyus" style={navLinkStyle}>Why Us</a>
           <a href="/faq" style={navLinkStyle}>FAQ</a>
           <a href="/contact" style={navLinkStyle}>Contact Us</a>
           <a
