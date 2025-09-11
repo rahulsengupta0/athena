@@ -8,6 +8,7 @@ import About from  "./pages/AboutUs/About"
 import { Contact } from "./pages/contact/contact"
 import FaqPage from "./pages/faqpage/faqpage"
 import Features from "./pages/Features/Features"
+import WhyUs from "./pages/Whyus/WhyUs"
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/faq" element={<FaqPage/>} />
         <Route path="/features" element={<Features/>} />
-       
+        <Route path="/whyus" element={<WhyUs/>}/>
       </Routes>
       <Footer />
     </Router>

@@ -3,9 +3,33 @@ import formbg from '../../assets/formbg.mp4';
 
 export const Form = () => {
   return (
-    <section style={styles.container}>
+    <section className="contact-form-section" style={styles.container}>
+      <style>{`
+        /* Responsive tweaks scoped to the contact form section */
+        .contact-form-section { padding: 40px 20px; }
+        .contact-form-iframe { height: 1328px; }
+        .contact-form-video { display: block; }
+
+        @media (max-width: 1024px) {
+          .contact-form-section { padding: 32px 16px; }
+          .contact-form-iframe { height: 1100px; }
+        }
+
+        @media (max-width: 768px) {
+          .contact-form-section { padding: 28px 14px; }
+          .contact-form-iframe { height: 1250px; }
+        }
+
+        @media (max-width: 600px) {
+          .contact-form-section { padding: 22px 12px; }
+          /* Hide heavy background video on very small screens for performance */
+          .contact-form-video { display: none; }
+          .contact-form-iframe { height: 1400px; }
+        }
+      `}</style>
       {/* Background video */}
       <video
+        className="contact-form-video"
         autoPlay
         loop
         muted
@@ -23,6 +47,7 @@ export const Form = () => {
       <div style={styles.formWrapper}>
         <iframe
           src="https://api.wonderengine.ai/widget/form/dCgUnKpQ6hAXUgj5doxe"
+          className="contact-form-iframe"
           style={styles.formIframe}
           title="Athena Contact"
         ></iframe>
@@ -31,7 +56,7 @@ export const Form = () => {
   );
 };
 
-const styles: Record<string, React.CSSProperties> = {
+const styles = {
   container: {
     width: '100%',
     padding: '40px 20px',
