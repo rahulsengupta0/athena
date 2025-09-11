@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Mail, ArrowRight, ArrowLeft } from "lucide-react";
-import paul from "../../assets/paul.jpeg";
+import paul from "../../assets/Paul.jpeg";
 
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
