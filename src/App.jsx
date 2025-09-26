@@ -4,11 +4,11 @@ import Home from "./pages/homepage/home"
 import Navbar from "./components/navbar"
 import Footer from "./components/footer"
 import PageTransitionOverlay from "./components/PageTransitionOverlay"
-import About from  "./pages/AboutUs/About"
-import { Contact } from "./pages/contact/contact"
-import FaqPage from "./pages/faqpage/faqpage"
-import Features from "./pages/Features/Features"
-import WhyUs from "./pages/Whyus/WhyUs"
+import About from  "./pages/AboutUsPage/About"
+import { Contact } from "./pages/contactpage/contact"
+import FaqPage from "./pages/faqpages/faqpage"
+import Features from "./pages/FeaturesPage/Features"
+import WhyUs from "./pages/WhyusPage/WhyUs"
 
 function App() {
   return (
