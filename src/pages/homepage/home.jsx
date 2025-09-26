@@ -6,6 +6,7 @@ import About from '../../components/homepage/about';
 import Ready from '../../components/homepage/readysection';
 import Features from '../../components/homepage/features';
 import LearningSection from '../../components/homepage/learningsection';
+import Testimonial from '../../components/homepage/Testimonial';
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
       <Features />
       <LearningSection />
       <Ready />
+      <Testimonial />
     </>
   );
 };

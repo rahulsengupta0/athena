@@ -17,71 +17,63 @@ const AboutHero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1 }}
       >
-        <motion.h2 
-          style={{
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            fontWeight: 700,
-            color: '#0f172a',
-            lineHeight: 1.2,
-            textAlign: 'center',
-            marginBottom: '1.5rem'
-          }}
-          initial="hidden"
-          animate="visible"
-          variants={staggerChildren}
-        >
-          {[
-            "Athena: The Future of Learning",
-            "Empowering Educators & Learners with",
-            "Advanced Tech & Progressive Education"
-          ].map((line, i) => (
-            <motion.span
-              key={i}
-              style={{ display: 'block' }}
-              variants={{
-                hidden: { opacity: 0, y: 15 },
-                visible: { 
-                  opacity: 1, 
-                  y: 0,
-                  transition: { duration: 0.5, delay: 0.2 + i * 0.1 }
-                }
-              }}
-            >
-              {i === 1 ? (
-                <span style={{
-                  color: '#0284c7',
-                  fontWeight: 700,
-                  background: 'linear-gradient(to right, rgba(2, 132, 199, 0.1), transparent)',
-                  padding: '0.3rem 1rem',
-                  borderRadius: '12px',
-                  display: 'inline-block',
-                  margin: '0.5rem 0'
-                }}>
-                  {line}
-                </span>
-              ) : (
-                line
-              )}
-            </motion.span>
-          ))}
-        </motion.h2>
-        
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.7 }}
-          style={{
-            fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-            color: '#475569',
-            textAlign: 'center',
-            maxWidth: '800px',
-            margin: '0 auto',
-            lineHeight: 1.6
-          }}
-        >
-          Athena LMS transforms how educational institutions and businesses create, deliver, 
-          and manage learning experiences with cutting-edge technology and intuitive design.
-        </motion.p>
+       <motion.h2
+  initial="hidden"
+  animate="visible"
+  style={{ textAlign: 'center', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700, marginBottom: '1.5rem' }}
+>
+  {[
+    "Athena – The Next Generation Learning Platform",
+    "Learn. Create. Transform.",
+    "Teach Smarter, Engage Deeper, Scale Faster"
+  ].map((line, i) => (
+    <motion.span
+      key={i}
+      style={{ display: 'block' }}
+      variants={{
+        hidden: { opacity: 0, y: 15 },
+        visible: { 
+          opacity: 1, 
+          y: 0,
+          transition: { duration: 0.5, delay: 0.2 + i * 0.1 }
+        }
+      }}
+    >
+      {i === 1 ? (
+        <span style={{
+          color: '#0284c7',
+          fontWeight: 700,
+          background: 'linear-gradient(to right, rgba(2, 132, 199, 0.1), transparent)',
+          padding: '0.3rem 1rem',
+          borderRadius: '12px',
+          display: 'inline-block',
+          margin: '0.5rem 0'
+        }}>
+          {line}
+        </span>
+      ) : (
+        line
+      )}
+    </motion.span>
+  ))}
+</motion.h2>
+
+<motion.p
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.6, duration: 0.7 }}
+  style={{
+    fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
+    color: '#475569',
+    textAlign: 'center',
+    maxWidth: '800px',
+    margin: '0 auto',
+    lineHeight: 1.6
+  }}
+>
+Athena is an AI-powered course creation platform that combines simplicity, flexibility, and intelligence to transform learning.
+</motion.p>
+
 
         {/* Animated CTA buttons */}
         <motion.div 
@@ -115,7 +107,7 @@ const AboutHero = () => {
               overflow: 'hidden'
             }}
           >
-            <span style={{ position: 'relative', zIndex: 2 }}>Get Started Free</span>
+            <span style={{ position: 'relative', zIndex: 2 }}> Start For Free</span>
             <motion.div 
               style={{
                 position: 'absolute',
@@ -150,7 +142,7 @@ const AboutHero = () => {
               fontSize: '1rem'
             }}
           >
-            Watch Demo
+            Book a Demo
           </motion.button>
         </motion.div>
       </motion.div>

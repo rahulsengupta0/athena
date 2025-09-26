@@ -6,27 +6,67 @@ export const Form = () => {
     <section className="contact-form-section" style={styles.container}>
       <style>{`
         /* Responsive tweaks scoped to the contact form section */
-        .contact-form-section { padding: 40px 20px; }
-        .contact-form-iframe { height: 1328px; }
-        .contact-form-video { display: block; }
+        .contact-form-section { 
+          padding: 8vh 2vw 8vh 2vw;
+          background: linear-gradient(to bottom, #ffffff, #f9fbff 70%, #e6f2ff 100%);
+        }
+        
+        .contact-form-iframe { 
+          height: 1328px;
+          border-radius: 16px;
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.01), 0 1.5px 12px rgba(10, 41, 49, 0.1);
+        }
+        
+        .contact-form-video { 
+          display: block;
+          filter: brightness(0.9);
+        }
+
+        @media (max-width: 1200px) {
+          .contact-form-section { padding: 6vh 2vw 6vh 2vw; }
+          .contact-form-iframe { height: 1250px; }
+        }
 
         @media (max-width: 1024px) {
-          .contact-form-section { padding: 32px 16px; }
+          .contact-form-section { padding: 5vh 2vw 5vh 2vw; }
           .contact-form-iframe { height: 1100px; }
         }
 
+        @media (max-width: 900px) {
+          .contact-form-section { padding: 4vh 2vw 4vh 2vw; }
+          .contact-form-iframe { height: 1200px; }
+        }
+
         @media (max-width: 768px) {
-          .contact-form-section { padding: 28px 14px; }
+          .contact-form-section { padding: 4vh 3vw 4vh 3vw; }
           .contact-form-iframe { height: 1250px; }
         }
 
         @media (max-width: 600px) {
-          .contact-form-section { padding: 22px 12px; }
-          /* Hide heavy background video on very small screens for performance */
-          .contact-form-video { display: none; }
-          .contact-form-iframe { height: 1400px; }
+          .contact-form-section { 
+            padding: 3vh 4vw 3vh 4vw;
+            background: linear-gradient(to bottom, #ffffff, #f9fbff 90%, #e6f2ff 100%);
+          }
+          .contact-form-iframe { 
+            height: 1400px;
+            border-radius: 12px;
+          }
+          /* Keep video but make it more subtle */
+          .contact-form-video { 
+            display: block;
+            filter: brightness(0.8);
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .contact-form-section { padding: 2vh 5vw 2vh 5vw; }
+          .contact-form-iframe { 
+            height: 1450px;
+            border-radius: 10px;
+          }
         }
       `}</style>
+      
       {/* Background video */}
       <video
         className="contact-form-video"
@@ -40,10 +80,10 @@ export const Form = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Light blue overlay */}
+      {/* Subtle blue overlay */}
       <div style={styles.blueOverlay}></div>
 
-      {/* Form content above overlay and video */}
+      {/* Form content with Hero-like container width */}
       <div style={styles.formWrapper}>
         <iframe
           src="https://api.wonderengine.ai/widget/form/dCgUnKpQ6hAXUgj5doxe"
@@ -59,10 +99,11 @@ export const Form = () => {
 const styles = {
   container: {
     width: '100%',
-    padding: '40px 20px',
+    minHeight: '80vh',
+    padding: '8vh 2vw 8vh 2vw',
+    background: 'linear-gradient(to bottom, #ffffff, #f9fbff 70%, #e6f2ff 100%)',
     position: 'relative',
     overflow: 'hidden',
-    minHeight: '100vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -84,25 +125,24 @@ const styles = {
     width: '100%',
     height: '100%',
     backgroundColor: '#b3d9ff',
-    opacity: 0.3,
+    opacity: 0.15,
     zIndex: 5,
     pointerEvents: 'none',
   },
   formWrapper: {
     width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '15px',
-    position: 'relative',
-    zIndex: 10,
     maxWidth: '1200px',
     margin: '0 auto',
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
+    zIndex: 10,
   },
   formIframe: {
     width: '100%',
     height: '1328px',
     border: 'none',
-    borderRadius: '4px',
+    borderRadius: '16px',
     background: 'transparent',
   },
 };
