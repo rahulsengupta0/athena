@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import principles1 from "../../assets/education.jpg"; 
 import principles2 from "../../assets/Uncover.jpg"; 
-import "./Principles.css"; // Import CSS file
+import "../AboutUs/Principles.css";
 
 const Principles = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
