@@ -20,7 +20,7 @@
     margin-bottom: 64px;
   }
   
-  .principles-subtitle {
+  .principles-heading .principles-subtitle {
     color: #6495ED !important;
     font-weight: 500;
     text-transform: uppercase;
@@ -29,7 +29,7 @@
     margin-bottom: 16px;
   }
   
-  .principles-title {
+  .principles-heading .principles-title {
     font-size: clamp(2.5rem, 5vw, 3.75rem);
     font-weight: bold;
     font-family: "NeueMontreal", sans-serif;
@@ -38,7 +38,7 @@
     margin: 0 0 16px 0;
   }
   
-  .principles-description {
+  .principles-heading .principles-description {
     margin: 16px 0 0 0;
     font-size: 18px;
     color: #374151 !important;
@@ -81,6 +81,10 @@
     transition: transform 0.6s ease;
   }
   
+  .principle-card:hover .card-image {
+    transform: scale(1.15);
+  }
+  
   /* Shine Effect */
   .shine-effect {
     position: absolute;
@@ -100,7 +104,7 @@
     opacity: 1;
   }
   
-  /* Card Overlay */
+  /* Card Overlay - FIXED WHITE TEXT */
   .card-overlay {
     position: absolute;
     inset: 0;
@@ -108,8 +112,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 28px;
-    color: white;
-    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.35), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.4), transparent);
     transform: translateY(100%);
     transition: transform 0.5s ease;
     border-radius: 25px;
@@ -123,25 +126,32 @@
     font-size: 26px;
     font-weight: bold;
     font-family: "NeueMontreal", sans-serif;
-    color: #ffffff !important;
+    color: #ffffff !important; /* WHITE text */
     margin: 0 0 12px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
   
   .overlay-description {
     font-size: 17px;
-    color: rgba(255,255,255,0.9) !important;
+    color: rgba(255,255,255,0.95) !important; /* WHITE text with slight transparency */
     line-height: 1.7;
     margin: 0 0 18px 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   }
   
   .overlay-link {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #ffffff !important;
+    color: #ffffff !important; /* WHITE text */
     font-weight: 600;
     text-decoration: none;
     transition: transform 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+  
+  .overlay-link:hover {
+    transform: translateX(6px);
   }
   
   /* Animations */
@@ -175,6 +185,12 @@
     animation: cardIn 0.8s ease-out forwards;
   }
   
+  /* Hover effects for card */
+  .principle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  }
+  
   /* Responsive Design */
   @media (min-width: 768px) {
     .principles-grid {
@@ -206,17 +222,14 @@
     }
   }
   
-  /* Ensure text colors are always visible */
-  .principle-card * {
-    color: inherit !important;
+  /* Force white text in overlay no matter what */
+  .card-overlay .overlay-title,
+  .card-overlay .overlay-description,
+  .card-overlay .overlay-link {
+    color: #ffffff !important;
   }
   
-  /* Fix for any global color overrides */
-  .principles-section h1,
-  .principles-section h2,
-  .principles-section h3,
-  .principles-section h4,
-  .principles-section p,
-  .principles-section span {
-    color: inherit !important;
+  /* Nuclear option for overlay text */
+  .principle-card .card-overlay * {
+    color: #ffffff !important;
   }
